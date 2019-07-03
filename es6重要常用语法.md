@@ -252,3 +252,22 @@ for (let item of set.entries()) {
 // ["blue", "blue"]
 ```
 * Map
+>JavaScript 的对象（Object），本质上是键值对的集合（Hash 结构），但是传统上只能用字符串当作键。这给它的使用带来了很大的限制。
+```javascript
+const m = new Map([['name','yzg'],['age',25]]);
+const o = {p: 'Hello World'};
+
+m.set(o, 'content')
+m.get(o) // "content"
+
+m.has(o) // true
+m.delete(o) // true
+m.has(o) // false
+m.has('name')  // true
+m.get('age') //25
+```
+>Map 遍历操作 
++ Map.prototype.keys()：返回键名的遍历器
++ Map.prototype.values()：返回键值的遍历器
++ Map.prototype.entries()：返回键值对的遍历器
++ Map.prototype.forEach()：使用回调函数遍历每个成员
